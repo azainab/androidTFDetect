@@ -92,6 +92,7 @@ Trying to implement the above and adding Yolo detector will help the detections 
 The Yolo is used to help the detections happen in a faster way.
 
 ➢	Open the downloaded git tensorflow project as mentioned above and hover to the android section tensorflow>examples>android. There might be few ugrades or installations might be required when you open the project in android. Accept all settings as default, except that the NDK version has to be 14 only.
+
 ➢	After cloning, the android package in your system might face few issues for which the resolves have been given in my blog:
     
 If you face the error “Error running app: default activity not found.” I have mentioned the solution in my blog http://ameemazainab.blogspot.qa/ 
