@@ -7,6 +7,7 @@
 	* 	Motivation and State of Art	
 	* 	Literature Review	
 2.	Methodology	
+	*	Making .so file
 	*	Making JAR file	
 	*	Implementing Yolo Detector	
 3.	Results and conclusion	
