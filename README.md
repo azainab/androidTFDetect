@@ -2,17 +2,17 @@ Table of Contents
 
 
 
-1.	Overview	3
-	a)	Problem Definition	3
-	b)	Objectives	3
-	c)	Motivation and State of Art	3
-	d)	Literature Review	3
-2.	Methodology	4
-	b)	Making JAR file	5
-	c)	Implementing Yolo Detector	6
-3.	Results and conclusion	10
-4.	Future Work	12
-5.	Bibliography	12
+1.	Overview	
+	a)	Problem Definition	
+	b)	Objectives	
+	c)	Motivation and State of Art	
+	d)	Literature Review	
+2.	Methodology	
+	b)	Making JAR file	
+	c)	Implementing Yolo Detector	
+3.	Results and conclusion	
+4.	Future Work	
+5.	Bibliography	
 
  
 1.	Overview
