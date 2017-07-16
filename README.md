@@ -244,4 +244,6 @@ with this:
 The following shown below are the screenshots captured from the android device. The 20 object categories were detected "aeroplane","bicycle","bird","boat","bottle","bus","car","cat","chair","cow","diningtable","dog","horse","motorbike","person","pottedplant","sheep","sofa","train" and "tvmonitor". The accuracy is close to 100% for stationary object in the above mentioned categories in good illumination. However when one of the factors such as light, speed of the object and object from different categories is changed the accuracy is reduced.
  
 ![GitHub Logo](https://github.com/azainab/androidTFDetect/blob/master/Detection%201.jpeg)
-Format: ![Alt Text](url)
+![GitHub Logo](https://github.com/azainab/androidTFDetect/blob/master/Detection%201.jpeg)
+![GitHub Logo](https://github.com/azainab/androidTFDetect/blob/master/Detection%201.jpeg)
+
