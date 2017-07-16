@@ -2,13 +2,13 @@
 
 
 1.	Overview	
-* a)	Problem Definition	
-* b)	Objectives	
-* c)	Motivation and State of Art	
-* d)	Literature Review	
+* 	Problem Definition	
+* 	Objectives	
+* 	Motivation and State of Art	
+* 	Literature Review	
 2.	Methodology	
-	b)	Making JAR file	
-	c)	Implementing Yolo Detector	
+*	Making JAR file	
+*	Implementing Yolo Detector	
 3.	Results and conclusion	
 4.	Future Work	
 5.	Bibliography	
