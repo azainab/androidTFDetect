@@ -1,4 +1,4 @@
-**Table of Contents**
+# **Table of Contents**
 
 
 1.	Overview	
@@ -64,7 +64,7 @@ $ bazel build -c opt
 
 You need gradle to import git projects in android. Install gradle, using homebrew in mac. You can first use git init and and git pull to get the repository (https://github.com/tensorflow/tensorflow.git [3]) in a folder and then import the android project.
 
-Go to the project folder in terminl and
+Go to the project folder in terminal and
  
 $ bazel build -c opt //tensorflow/contrib/android:libtensorflow_inference.so \
    --crosstool_top=//external:android/crosstool \
@@ -122,7 +122,7 @@ Refer to  (http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-o
     $ wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip
     $ unzip opencv_contrib.zip
 
-#virtual env keeps the python and opencv installations clean. Hence we install it here
+_virtual env keeps the python and opencv installations clean. Hence we install it here_
 
     $ sudo pip install virtualenv virtualenvwrapper
     $ sudo rm -rf ~/get-pip.py ~/.cache/pip
@@ -189,7 +189,7 @@ videoio.h has to be disabled to help this work. We can try the code below, it he
     $ python
     $ import cv2
 
-If this runs successfully cv2 is installed, and one can go ahead with the next steps.
+-If this runs successfully cv2 is installed, and one can go ahead with the next steps.
 
 Refer (https://github.com/thtrieu/darkflow)
 
@@ -205,13 +205,13 @@ Installation:
 -go ahead with the next steps
     $ ./flow --model cfg/v1/yolo-tiny.cfg --load bin/yolo-tiny.weights
 
-Note: The website has mentioned the names of the files which are not in the package. Make sure to have the files in the right path before you run. 
+_Note:_ The website has mentioned the names of the files which are not in the package. Make sure to have the files in the right path before you run. 
 
  
 
     $ ./ flow --model cfg/yolo-new.cfg
 
-Note: No file named yolo-new.cfg
+_Note:_ No file named yolo-new.cfg
 
     $ ./flow --model cfg/tiny-yolo-voc.cfg --load bin/tiny-yolo-voc.weights --savepb –verbalise
 
@@ -240,6 +240,6 @@ with this:
 
 #The model is ready to be implemented 
 
-3.	Results and conclusion
-The following shown below are the screenshots captured from the android device. The 20 object categories were detected "aeroplane","bicycle","bird","boat","bottle","bus","car","cat","chair", "cow","diningtable","dog","horse","motorbike","person","pottedplant","sheep","sofa","train" and "tvmonitor". The accuracy is close to 100% for stationary object in the above mentioned categories in good illumination. However when one of the factors such as light, speed of the object and object from different categories is changed the accuracy is reduced.
+## 3.	Results and conclusion
+The following shown below are the screenshots captured from the android device. The 20 object categories were detected "aeroplane","bicycle","bird","boat","bottle","bus","car","cat","chair","cow","diningtable","dog","horse","motorbike","person","pottedplant","sheep","sofa","train" and "tvmonitor". The accuracy is close to 100% for stationary object in the above mentioned categories in good illumination. However when one of the factors such as light, speed of the object and object from different categories is changed the accuracy is reduced.
  
