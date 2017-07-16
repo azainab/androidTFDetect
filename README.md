@@ -14,19 +14,19 @@
 5.	Bibliography	
 
  
-1.	Overview
+# **1.	Overview**
 
-a)	Problem Definition
+## **a)	Problem Definition**
 Research shows that the detection of objects like a human eye has not been achieved with high accuracy using cameras and cameras cannot be replaced with a human eye. Detection refers to identification of an object or a person by training a model by itself.
 Detection of images or moving objects have been highly worked upon, and has been integrated and used in commercial, residential and industrial environments. But, most of the strategies and techniques have heavy limitations in the form of computational resources, lack of proper data analysis of the measured trained data, dependence of the motion of the objects, inability to differentiate one object from other, and also there is a concern over speed of the movement and Illuminacy. Hence, there is a need to draft, apply and recognize new techniques of detection that tackle the existing limitations.
         
-b)	Objectives
+## **b)	Objectives**
 A model based on Scalable Object Detection using Deep Neural Networks to localize and track people/cars/potted plants and many others in the camera preview in real-time. This is implemented in an android application and used handy in a mobile phone or any other smart device.
 
-c)	Motivation and State of Art
+## **c)	Motivation and State of Art**
 Humans learn to recognize objects or humans by learning starting from their birth. Same idea has been utilized by incorporating the intelligence by training into a camera using neural networks and TensorFlow. This enables to have the same intelligence in cameras, which can be used as an artificial eye and can be used in many areas such as surveillance, detection of objects/things etc.,
 
-d)	Literature Review
+## **d)	Literature Review**
 Currently, it is difficult to know when and where people occupy a building. The part of the difficulty arises due to the fact that the current sensor technology is not utilized to the full efficiency and also, due to the lack of utilization of proper data analysis methods. The comforting fact is that with the advent of 21st century, there has been a vast improvement in the sensor technology and arrival of the Internet of Thing (IoT) devices [1]. In an environment with clutter and noise, detection is even more challenging. One of the difficulties presented in literature for detection is to identify a human when stationary. This is a common problem for any sensor that is based on the reflection of acoustic, optical, or electromagnetic wave off a surface. However, the issue of stationary humans being identified as objects has been solved in my project. For example, fast moving objects in real time may cause confusion in identification or classification by computer vision techniques. At the tracking level, objects may be stationary for no apparent reasons or they may move in any direction spontaneously. This makes the tracking problem particularly challenging.
 
 Furthermore, a particular type of technology may have difficulties meeting all necessary requirements in various lighting conditions, or rainy, foggy and inclement weather conditions, not to mention that most cameras or sensors have a limited field of view to monitor traffic in all directions. In addition, the clutter background and complex moving patterns of all objects on urban streets demand sophisticated and accurate real-time processing of sensor inputs to avoid false detection and recognition.
@@ -34,15 +34,15 @@ Furthermore, a particular type of technology may have difficulties meeting all n
 In order to overcome the aforementioned technical challenges, “You look only once” (Yolo) [2] detection system has been used not only to speed up the detection process, but also higher accuracy has been obtained.  Yolo has not been implemented with android before and I have implemented this with android. One of the applications and advantages is that the android mobile devices are easily available with everyone, and in future, this detection system can be applied for Sousveillance [3].
 
 
-2.	Methodology
+# **2.	Methodology**
 Let’s start with the building process for Android. The core of the TensorFlow is written in C++. In order to build for android, JNI (Java Native Interface) has to be used to call the C++ functions like loadModel, getPredictions, etc. A .so (shared object) file will be built, which is a C++ compiled file and a jar file which will consist of JAVA API that calls for the native C++ and then JAVA API will be called to get things done easily.
 
-Files needed:
+_Files needed:_
 
 1. the jar(Java API) and a .so(c++ compiled) file.
 2. We must have the pre-trained model file and a label file for the classification.
 
-Softwares, dependencies and packages needed:
+_Softwares, dependencies and packages needed:_
 
 1. Android SDK & NDK
 2. Bazel - primary build system for tensorflow
@@ -56,7 +56,7 @@ $ pip install --no-use-wheel --no-cache-dir Cython h5py
 
 The installation of cv2 might be tricky on some versions of operating systems, this has been explained in subsequent sections. 
 
-a. Making .so file
+## **a. Making .so file**
 
 $* touch workspace
 $ bazel build -c opt
@@ -72,7 +72,7 @@ $ bazel build -c opt //tensorflow/contrib/android:libtensorflow_inference.so \
 
  
 
-b.	Making JAR file
+## **b.	Making JAR file**
 The next step is to build a jar file which will be added to the android application of TF detect and this required bazel which has been installed in the dependencies section.
 
 $ bazel build //tensorflow/contrib/android:android_tensorflow_inference_java 
@@ -81,7 +81,7 @@ $ bazel build //tensorflow/contrib/android:android_tensorflow_inference_java
 
 All the steps above can also be referenced from [4]. By the end of this step the android application is ready to be installed into a mobile or any other smart device and has TF Classify, TF detect and TF stylize as three separate applications. 
 
-c.	Implementing Yolo Detector
+## **c.	Implementing Yolo Detector**
 The implementation above doesn't use TF Detect. The note on the implementation says:
 
 Note: Currently, in this build mode, YUV -> RGB is done using a less efficient Java implementation, and object tracking is not available in the "TF Detect" activity. Setting the build system to 'cmake' currently only builds libtensorflow_demo.so, which provides fast YUV -> RGB conversion and object tracking, while still acquiring TensorFlow support via the downloaded AAR, so it may be a lightweight way to enable these features.
@@ -126,7 +126,7 @@ Refer to  (http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-o
     $ sudo pip install virtualenv virtualenvwrapper
     $ sudo rm -rf ~/get-pip.py ~/.cache/pip
 
-# virtualenv and virtualenvwrapper
+_virtualenv and virtualenvwrapper_
 
     $ export WORKON_HOME=$HOME/.virtualenvs
     $ source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
@@ -136,7 +136,7 @@ Refer to  (http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-o
     $ mkvirtualenv cv -p python3
     $ workon cv
 
-#ensure that you are in the cv environment now and follow the next steps:
+_ensure that you are in the cv environment now and follow the next steps:_
 
     $ pip install numpy
     $ cd /Users/zuni/Downloads/darkflow-master/opencv-3.1.0
@@ -154,7 +154,7 @@ Refer to  (http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-o
     -D ENABLE_PRECOMPILED_HEADERS=OFF \
     -D BUILD_EXAMPLES=ON ..
 
-#By now you will see successful installation of cmake which is necessary for cv installation
+_By now you will see successful installation of cmake which is necessary for cv installation_
 
     $ make -j4
     $ make clean
@@ -162,24 +162,24 @@ Refer to  (http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-o
 
 One might face few errors, which would look like
 
-Error 1 make[1]: ***
+_Error 1 make[1]:_
 [modules/videoio/CMakeFiles/opencv_videoio.dir/all] 
 
-Error 2 make: ***
+_Error 2 make[2]:_
 
 videoio.h has to be disabled to help this work. We can try the code below, it helps in disabling quicktime
 
     $ cmake -DWITH_QUICKTIME=OFF -DWITH_GSTREAMER=OFF -DWITH_FFMPEG=OFF -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DCMAKE_BUILD_TYPE=Release .. ; make -j4
 
-#go the build folder
+-go the build folder
 
     $ cd /Users/zuni/Downloads/darkflow-master/opencv-3.1.0/build
     $ make
 
-#Now one actually installs opencv3 in mac
+-Now one actually installs opencv3 in mac
     $ sudo make install
 
-#To make sure workon runs on any terminal we need change few things:
+-To make sure workon runs on any terminal we need change few things:
 
     $export WORKON_HOME=~/.virtualenvs
     $VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
@@ -195,13 +195,13 @@ Refer (https://github.com/thtrieu/darkflow)
 Installation:
 
     $ python3 setup.py build_ext –inplace
-# Have a look at its options
+-Have a look at its options
     $ ./flow –h
-#One needs to install python using brew so we can link it
+-One needs to install python using brew so we can link it
     $ brew install python
     $ export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
     $ brew link python
-#go ahead with the next steps
+-go ahead with the next steps
     $ ./flow --model cfg/v1/yolo-tiny.cfg --load bin/yolo-tiny.weights
 
 Note: The website has mentioned the names of the files which are not in the package. Make sure to have the files in the right path before you run. 
@@ -214,7 +214,7 @@ Note: No file named yolo-new.cfg
 
     $ ./flow --model cfg/tiny-yolo-voc.cfg --load bin/tiny-yolo-voc.weights --savepb –verbalise
 
-#If you face this error “TypeError: makedirs() got an unexpected keyword argument 'exist_ok'” it is because of the version of python being used. The code is written in python3 and you are using python2 version.
+-If you face this error “TypeError: makedirs() got an unexpected keyword argument 'exist_ok'” it is because of the version of python being used. The code is written in python3 and you are using python2 version.
 
 Make the changes below:
     os.makedirs(os.path.dirname(name), exists_ok=True)
