@@ -42,6 +42,7 @@ _Files needed:_
 
 1. the jar(Java API) and a .so(c++ compiled) file.
 2. We must have the pre-trained model file and a label file for the classification.
+3. .pb files in the assets folder (you can download the .pb files from https://drive.google.com/file/d/0B4dPZkgiYl-SWW1TNTBpNUtKbGs/view?usp=sharing)
 
 _Softwares, dependencies and packages needed:_
 
