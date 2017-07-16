@@ -108,10 +108,15 @@ Step by step procedure has been explained below to help the TF detect work.
 For Yolo to work you will need:
 
 ➢	Open the android package: tensorflow>examples>android
+
 ➢	Make changes private static final boolean USE_YOLO = true;
+
 ➢	Dark net and Darkflow installed (http://pjreddie.com/darknet/  and https://github.com/thtrieu/darkflow )
+
 ➢	We will make changes in the darkflow package to customize it as per our requirement. (Most of the changes will be applied in the python files. In the process, there will be few packages necessary to be installed, and we have to install them all to avoid errors).
+
 ➢	Darkflow runs setup.py file to add all dependencies. 
+
 ➢	For darkflow one needs cythonize from cython.build and python
 
   Installing cv2:
