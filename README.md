@@ -97,6 +97,7 @@ The Yolo is used to help the detections happen in a faster way.
 If you face the error “Error running app: default activity not found.” I have mentioned the solution in my blog http://ameemazainab.blogspot.qa/ 
 
 ➢	As already discussed pre-trained model is needed for this implementation. “Inception5h“ package is available online for download [5] and it has to be added to assets folder in the android studio. This package contains the trained images that will be needed for the identification of the images.
+
 ➢	After making all the changes above, run the app in android studio.
 
 ➢	TF detect is very slow hence Yolo detector is added to TF detect. 
