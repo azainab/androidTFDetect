@@ -36,14 +36,20 @@ In order to overcome the aforementioned technical challenges, “You look only o
 
 
 # **2.	Methodology**
+You can directly clone the repository shared https://github.com/azainab/androidTFDetect/ and add the files below(but you have to make sure you have all the dependencies mentioned in the following sections added to your system):
+
+1. .pb files in the assets folder (you can download the .pb files from https://drive.google.com/file/d/0B4dPZkgiYl-SWW1TNTBpNUtKbGs/view?usp=sharing)
+2. .apk file in output>apk folder https://drive.google.com/open?id=0B4dPZkgiYl-SbktVbUdRaWRTYnM
+
+Otherwise, you can follow the whole procedure below and follow the process:
+
 Let’s start with the building process for Android. The core of the TensorFlow is written in C++. In order to build for android, JNI (Java Native Interface) has to be used to call the C++ functions like loadModel, getPredictions, etc. A .so (shared object) file will be built, which is a C++ compiled file and a jar file which will consist of JAVA API that calls for the native C++ and then JAVA API will be called to get things done easily.
 
 _Files needed:_
 
 1. the jar(Java API) and a .so(c++ compiled) file.
 2. We must have the pre-trained model file and a label file for the classification.
-3. .pb files in the assets folder (you can download the .pb files from https://drive.google.com/file/d/0B4dPZkgiYl-SWW1TNTBpNUtKbGs/view?usp=sharing)
-4. .apk file in output>apk folder https://drive.google.com/open?id=0B4dPZkgiYl-SbktVbUdRaWRTYnM
+
 
 _Softwares, dependencies and packages needed:_
 
