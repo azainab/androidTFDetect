@@ -1,0 +1,3 @@
+include ':TensorFlow-Android-Inference'
+
+findProject(":TensorFlow-Android-Inference").projectDir = new File("/Users/zuni/Downloads/tensorflow-master 2/tensorflow/contrib/android/cmake")
